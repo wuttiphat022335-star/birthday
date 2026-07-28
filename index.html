@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ของขวัญสุดพิเศษ 🎁</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fce4ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 90%;
+            width: 350px;
+        }
+        .envelope {
+            font-size: 80px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .envelope:hover {
+            transform: scale(1.1);
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 20px;
+        }
+        .hidden-content img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+        button {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>มีของขวัญมาส่งครับ! 🎁</h2>
+    <div class="envelope" id="env" onclick="openGift()">✉️</div>
+    <p id="hint">แตะที่ซองจดหมายเพื่อเปิดดู</p>
+
+    <div class="hidden-content" id="giftContent">
+        <h3>สุขสันต์วันพิเศษ! ❤️</h3>
+        <!-- เปลี่ยนชื่อรูปภาพ my-photo.jpg ให้ตรงกับชื่อไฟล์รูปของคุณ -->
+        <img src="my-photo.jpg" alt="รูปภาพของขวัญ">
+    </div>
+</div>
+
+<script>
+    function openGift() {
+        document.getElementById('giftContent').style.display = 'block';
+        document.getElementById('env').style.display = 'none';
+        document.getElementById('hint').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
